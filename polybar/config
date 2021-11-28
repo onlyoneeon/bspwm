@@ -39,7 +39,7 @@ format-offset =
 
 [colors]
 ; Nord theme ============
-background = #101010
+background = #000000
 foreground = #f3f4f5
 alert = #d08770
 volume-min = #a3be8c
@@ -119,7 +119,7 @@ font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow
 modules-center = 
-modules-right = pavolume memory2 cpu2 battery xkeyboard weather date
+modules-right = pavolume backlight memory2 cpu2 battery xkeyboard weather date
 
 tray-detached = false
 tray-offset-x = 0
@@ -232,14 +232,14 @@ format = <label-state> <label-mode>
 
 label-focused = %icon%
 label-focused-background = ${colors.background}
-label-focused-underline= #6790eb
+label-focused-underline= #FFC300
 label-focused-padding = 2
-label-focused-foreground = #6790EB
+label-focused-foreground = #FFC300
 
 label-occupied = %icon%
 label-occupied-padding = 2
 label-occupied-background = ${colors.background}
-label-occupied-foreground = #6790EB
+label-occupied-foreground = #b3b300
 
 label-urgent = %icon%
 label-urgent-padding = 2
@@ -319,6 +319,7 @@ format-underline = #7D49B6
 ;https://github.com/jaagr/polybar/wiki/Module:-backlight
 
 type = internal/backlight
+enable-scroll = true
 
 ; Use the following command to list available cards:
 ; $ ls -1 /sys/class/backlight/
@@ -334,14 +335,14 @@ format-background = ${colors.background}
 
 ; Available tokens:
 ;   %percentage% (default)
-label = %percentage%%
+label =  %percentage%%
 
 ; Only applies if <ramp> is used
-ramp-0 = 🌕
-ramp-1 = 🌔
-ramp-2 = 🌓
-ramp-3 = 🌒
-ramp-4 = 🌑
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = ◉
+ramp-4 = 
 
 ; Only applies if <bar> is used
 bar-width = 10
@@ -700,7 +701,7 @@ interval = 1
 label = %percentage_used%%
 
 format = <label>
-format-prefix = "    "
+format-prefix = "    "
 format-prefix-foreground = #3384d0
 format-underline = #3384d0
 format-foreground = ${colors.foreground}

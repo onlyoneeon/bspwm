@@ -15,6 +15,8 @@ function run {
 #autorandr horizontal
 
 $HOME/.config/polybar/launch.sh &
+Exec=xcalib $HOME/.config/bspwm/scripts/Monitor_5-24-2012_1.icc
+$HOME/.config/bspwm/scripts/Calibration.sh &
 
 #change your keyboard if you need it
 #setxkbmap -layout be
@@ -47,14 +49,4 @@ picom --config $HOME/.config/bspwm/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 run volumeicon &
-#nitrogen --restore &
-#run caffeine &
-#run vivaldi-stable &
-#run firefox &
-#run thunar &
-#run dropbox &
-#run insync start &
-#run discord &
-#run spotify &
-#run atom &
 run nitrogen --restore &
